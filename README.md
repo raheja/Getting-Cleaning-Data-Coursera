@@ -24,10 +24,12 @@ Subsequently, we assign the names of the variables using information given in th
 In setion 2, using the library dplyr, we select columns that contain the word "mean", "std", "Id" (i.e. mean signals, std of signals, and subject + activity id). We omit any other variable that may contain the word mean, ("meanFreq") but is not required for the assignment.
 
 -------------------------------------------------
-In section 3, we read in the Activity.txt file, and use the descriptive names to match and replace the Activity Ids
+In section 3, we read in the Activity.txt file, and use the descriptive names to match and replace the Activity Ids. After match and replace, we rename
+the column to 'Activity'.
 
 -------------------------------------------------
-In section 4, we assign descriptive names for each variables using the function gsub. 
+In section 4, we assign descriptive names for each variables using the function gsub. 't' represents the time domain and has been replaced by Time.
+Similarly, 'f' is replaced by Freq. Additionally, the names are cleaned by replacing "_" and "..."with "". 
 
 -------------------------------------------------
 Finally, in section 5, we again use the library dplyr, functions 'summarise_each' and 'group_by', to calculate the average of each variable by grouping the dataset by the activity id and the subject id.
