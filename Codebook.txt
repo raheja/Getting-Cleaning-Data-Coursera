@@ -1,0 +1,167 @@
+==================================================================
+Original Data Source
+Human Activity Recognition Using Smartphones Dataset
+Version 1.0
+
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+activityrecognition@smartlab.ws
+www.smartlab.ws
+
+The features selected for the original database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain 
+signals were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a 
+corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal were then separated into body and gravity acceleration signals 
+using another low pass Butterworth filter with a corner frequency of 0.3 Hz. Subsequently, the body linear acceleration and angular velocity were 
+derived in time to obtain Jerk signals. Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing the frequency domain signals. 
+
+These signals were obtained from a group of 30 subjects within an age bracket of 19-48 years, with each person performing six activities 
+(WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on their waist. 
+
+==================================================================
+==================================================================
+
+Subsetted Data Details obtained from script "run_analysi.R"
+
+The dataset obtained represents the mean and the standard deviation values of body and gravity acceleration along the 3 axis (X,Y,Z) and the 
+3-axial angular velocity (X,Y,Z). From the original database, the mean and the standard deviation values were sub-setted out and an average performed for
+each subject and each activity to obtain this dataset. The description are as follows:
+
+Column 1:- Each row identifies the activity performed during the experiment
+"1" "Activity_Id"    
+
+Column 2:- Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30 
+"2" "Subject_Id" 
+
+Column 3-5:- Each row represents the mean of the 'mean Body Acceleration' in the Time domain along the 3 axis for each subject and each activity. 
+"3" "Body_Acceleration_Time_Domain_MeanX"
+"4" "Body_Acceleration_Time_Domain_MeanY"
+"5" "Body_Acceleration_Time_Domain_MeanZ"
+
+Column 6-7:- Each row represents the mean of the 'mean Gravitational Acceleration' in the Time domain along the 3 axis for each subject and each activity. 
+"6" "Gravity_Acceleration_Time_Domain_MeanX"
+"7" "Gravity_Acceleration_Time_Domain_MeanY"
+"8" "Gravity_Acceleration_Time_Domain_MeanZ"
+
+Column 9-11:- Each row represents the mean of the 'mean Body's Jerk Acceleration' in Time domain along the 3 axis for each subject and each activity.
+"9" "Body_Acceleration_Time_Domain_JerkMeanX"
+"10" "Body_Acceleration_Time_Domain_JerkMeanY"
+"11" "Body_Acceleration_Time_Domain_JerkMeanZ"
+
+Column 12-14:- Each row represents the mean of the 'mean Angular Velocity of Body' in the Time domain along the 3 axis for each subject and each activity. 
+"12" "Body_AngularVelocity_Time_Domain_MeanX"
+"13" "Body_AngularVelocity_Time_Domain_MeanY"
+"14" "Body_AngularVelocity_Time_Domain_MeanZ"
+
+Column 15-17:- Each row represents the mean of the 'mean Body's Jerk Angular Velocity' in Time domain along the 3 axis for each subject and each activity.
+"15" "Body_AngularVelocity_Time_Domain_JerkMeanX"
+"16" "Body_AngularVelocity_Time_Domain_JerkMeanY"
+"17" "Body_AngularVelocity_Time_Domain_JerkMeanZ"
+
+Column 18:- Each row represents the mean of the 'mean magnitude of Body Acceleration' in Time domain for each subject and each activity.
+"18" "Body_Acceleration_Time_Domain_MagMean"
+
+Column 19:- Each row represents the mean of the 'mean magnitude of Gravitational Acceleration' in Time domain for each subject and each activity.
+"19" "Gravity_Acceleration_Time_Domain_MagMean"
+
+Column 20-22:- Each row represents the mean of the 'mean magnitude of Body's Jerk Acceleration' in Time domain for each subject and each activity.
+"20" "Body_Acceleration_Time_Domain_JerkMagMean"
+"21" "Body_AngularVelocity_Time_Domain_MagMean"
+"22" "Body_AngularVelocity_Time_Domain_JerkMagMean"
+
+Column 23-25:- Each row represents the mean of the 'mean Body Acceleration' in the Frequency domain along the 3 axis for each subject and each activity.
+"23" "Body_Acceleration_Freq_Domain_MeanX"
+"24" "Body_Acceleration_Freq_Domain_MeanY"
+"25" "Body_Acceleration_Freq_Domain_MeanZ"
+
+Column 26-28:- Each row represents the mean of the 'mean of Body's Jerk Acceleration' in the Frequency domain along the 3 axis for each subject and each activity.
+"26" "Body_Acceleration_Freq_Domain_JerkMeanX"
+"27" "Body_Acceleration_Freq_Domain_JerkMeanY"
+"28" "Body_Acceleration_Freq_Domain_JerkMeanZ"
+
+Column 29-31:- Each row represents the mean of the 'mean Body Angular Velocity' in the Frequency domain along the 3 axis for each subject and each activity.
+"29" "Body_AngularVelocity_Freq_Domain_MeanX"
+"30" "Body_AngularVelocity_Freq_Domain_MeanY"
+"31" "Body_AngularVelocity_Freq_Domain_MeanZ"
+
+Column 32:- Each row represents the mean of the 'mean magnitude of Body Acceleration' in the Frequency domain for each subject and each activity. 
+"32" "Body_Acceleration_Freq_Domain_MagMean"
+
+Column 33:- Each row represents the mean of the 'mean magnitude of Body's Jerk Acceleration' in the Frequency domain for each subject and each activity. 
+"33" "Body_Acceleration_Freq_Domain_JerkMagMean"
+
+Column 34:- Each row represents the mean of the 'mean magnitude of Body Angular Velocity' in the Frequency domain for each subject and each activity. 
+"34" "Body_AngularVelocity_Freq_Domain_MagMean"
+
+Column 35:- Each row represents the mean of the 'mean magnitude of Body's Jerk Angular Velocity' in the Frequency domain for each subject and each activity.
+"35" "Body_AngularVelocity_Freq_Domain_JerkMagMean"
+
+Column 36-38:- Each row represents the mean of the 'standard deviation of Body Acceleration' in the Time domain along the 3 axis for each subject and each activity. 
+"36" "Body_Acceleration_Time_Domain_StddevX"
+"37" "Body_Acceleration_Time_Domain_StddevY"
+"38" "Body_Acceleration_Time_Domain_StddevZ"
+
+Column 39-41:- Each row represents the mean of the 'standard deviation of Gravitational Acceleration' in the Time domain along the 3 axis for each subject and each activity. 
+"39" "Gravity_Acceleration_Time_Domain_StddevX"
+"40" "Gravity_Acceleration_Time_Domain_StddevY"
+"41" "Gravity_Acceleration_Time_Domain_StddevZ"
+
+Column 42-44:- Each row represents the mean of the 'standard deviation of Body Acceleration' in the Time domain along the 3 axis for each subject and each activity. 
+"42" "Body_Acceleration_Time_Domain_JerkStddevX"
+"43" "Body_Acceleration_Time_Domain_JerkStddevY"
+"44" "Body_Acceleration_Time_Domain_JerkStddevZ"
+
+Column 45-47:- Each row represents the mean of the 'standard deviation of Body Angular Velocity' in the Time domain along the 3 axis for each subject and each activity. 
+"45" "Body_AngularVelocity_Time_Domain_StddevX"
+"46" "Body_AngularVelocity_Time_Domain_StddevY"
+"47" "Body_AngularVelocity_Time_Domain_StddevZ"
+
+Column 48-50:- Each row represents the mean of the 'standard deviation of Body's Jerk Angular Velocity' in the Time domain along the 3 axis for each subject and each activity. 
+"48" "Body_AngularVelocity_Time_Domain_JerkStddevX"
+"49" "Body_AngularVelocity_Time_Domain_JerkStddevY"
+"50" "Body_AngularVelocity_Time_Domain_JerkStddevZ"
+
+Column 51:- Each row represents the mean of the 'standard deviation of the magnitude of Body Acceleration' in the Time domain for each subject and each activity. 
+"51" "Body_Acceleration_Time_Domain_MagStddev"
+
+Column 52:- Each row represents the mean of the 'standard deviation of the magnitude of Gravitational Acceleration' in the Time domain for each subject and each activity. 
+"52" "Gravity_Acceleration_Time_Domain_MagStddev"
+
+Column 53:- Each row represents the mean of the 'standard deviation of the magnitude of Body's Jerk Acceleration' in the Time domain for each subject and each activity. 
+"53" "Body_Acceleration_Time_Domain_JerkMagStddev"
+
+Column 53:- Each row represents the mean of the 'standard deviation of the magnitude of Body Angular Velocity' in the Time domain for each subject and each activity. 
+"54" "Body_AngularVelocity_Time_Domain_MagStddev"
+
+Column 55:- Each row represents the mean of the 'standard deviation of the magnitude of Body's Jerk Angular Velocity' in the Time domain for each subject and each activity. 
+"55" "Body_AngularVelocity_Time_Domain_JerkMagStddev"
+
+Column 56-58:- Each row represents the mean of the 'standard deviation of Body Acceleration' in the Frequency domain along the 3 axis for each subject and each activity.
+"56" "Body_Acceleration_Freq_Domain_StddevX"
+"57" "Body_Acceleration_Freq_Domain_StddevY"
+"58" "Body_Acceleration_Freq_Domain_StddevZ"
+
+Column 59-61:- Each row represents the mean of the 'standard deviation of Body's Jerk Acceleration' in the Frequency domain along the 3 axis for each subject and each activity.
+"59" "Body_Acceleration_Freq_Domain_JerkStddevX"
+"60" "Body_Acceleration_Freq_Domain_JerkStddevY"
+"61" "Body_Acceleration_Freq_Domain_JerkStddevZ"
+
+Column 62-64:- Each row represents the mean of the 'standard deviation of Body Angular Velocity' in the Frequency domain along the 3 axis for each subject and each activity.
+"62" "Body_AngularVelocity_Freq_Domain_StddevX"
+"63" "Body_AngularVelocity_Freq_Domain_StddevY"
+"64" "Body_AngularVelocity_Freq_Domain_StddevZ"
+
+Column 65:- Each row represents the mean of the 'standard deviation of the magnitude of Body Acceleration' in the Frequency domain for each subject and each activity.
+"65" "Body_Acceleration_Freq_Domain_MagStddev"
+
+Column 66:- Each row represents the mean of the 'standard deviation of the magnitude of Body's Jerk Acceleration' in the Frequency domain for each subject and each activity.
+"66" "Body_Acceleration_Freq_Domain_JerkMagStddev"
+
+Column 67:- Each row represents the mean of the 'standard deviation of the magnitude of Body Angular Velocity' in the Frequency domain for each subject and each activity.
+"67" "Body_AngularVelocity_Freq_Domain_MagStddev"
+
+Column 68:- Each row represents the mean of the 'standard deviation of the magnitude of Body's Jerk Angular Velocity' in the Frequency domain for each subject and each activity.
+"68" "Body_AngularVelocity_Freq_Domain_JerkMagStddev"
+
